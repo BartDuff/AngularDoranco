@@ -1,0 +1,32 @@
+<p>
+  {{title}}
+</p>
+<table class="table table-slipped">
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Age</th>
+  </tr>
+  <tr *ngFor="let s of monJson">
+    <td>{{ s.id }}</td>
+    <td>{{ s.nom }}</td>
+    <td>{{ s.prenom }}</td>
+    <td>{{ s.age }}</td>
+  </tr>
+</table>
+<div>
+  <table class="table table-slipped">
+    <tr>
+      <th>Id:</th>
+      <th>Name:</th>
+      <th>Username:</th>
+    </tr>
+    <tr *ngFor="let t of monApi">
+      <td>{{ t.id }}</td>
+      <td>{{ t.name }}</td>
+      <td>{{ t.username }}</td>
+      <a routerLink="/comp1/{{t.id}}">Détails</a>
+    </tr>
+  </table>
+</div>

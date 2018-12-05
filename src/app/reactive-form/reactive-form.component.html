@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Id:<input type="number" class="form-control" formControlName="id" placeholder="id"></label>
+  </div>
+  <div class="form-group">
+    <label>Nom:<input type="text" class="form-control" formControlName="nom" placeholder="nom" required></label>
+    <div class="alert alert-danger" role="alert" [hidden]='form.value.nom'>
+      Le champ <b>Nom</b> est requis
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Prénom:<input type="text" class="form-control" formControlName="prenom" placeholder="prenom" required></label>
+    <div class="alert alert-danger" role="alert" [hidden]='form.value.prenom'>
+      Le champ <b>Prenom</b> est requis
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Age:<input type="number" class="form-control" formControlName="age" placeholder="age"></label>
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+<hr>
+{{ form.value | json }}

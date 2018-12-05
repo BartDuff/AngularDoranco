@@ -1,0 +1,15 @@
+<h1>Liste des stagiaires: </h1>
+<table class="table table-slipped">
+  <tr>
+    <th>ID: </th>
+    <th>Nom: </th>
+    <th>Prénom: </th>
+    <th>Age: </th>
+  </tr>
+  <tr *ngFor="let s of stagiaires">
+    <td>{{ s.id }}</td>
+    <td>{{ s.nom }}</td>
+    <td>{{ s.prenom }}</td>
+    <td>{{ s.age }}</td>
+  </tr>
+</table>
